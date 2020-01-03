@@ -1,9 +1,9 @@
 <!-- this directs it to url submit. NOTE: url_for('submit') -->
 <form action="{{ url_for('home') }}" method="post">
   <!-- input_text is what this text area is called. -->
-    <textarea name="text"></textarea>
+    <textarea name="textInput"></textarea> <!--this text area is called textInput and can be accessed through that name-->
     <input type="submit">
 </form>
-<textarea name="output_text">
+<textarea name="textOutput">
 {{output}}
 </textarea>
