@@ -17,8 +17,9 @@ def home():
 
 @app.route('/home', methods=['POST']) 
 def submit():
-    output =  '{}'.format(request.form['textInput'])
-    
+    output = '{}'.format(request.form['textInput']) #grab text from textarea in html
+    output = output.upper() #processing could happen here
+    print(output)
     return render_template('home.html', output=output) #this loads output into the html file. neat.
 
 
