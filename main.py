@@ -15,9 +15,11 @@ output = ''
 def home():
   return render_template('home.html') #render_templates renders html file in /templates
 
-@app.route('/submit', methods=['POST'])
+@app.route('/home', methods=['POST']) 
 def submit():
-    return 'You entered: {}'.format(request.form['text'])
+    output = ''.format(request.form['text'])
+    output.upper() #processing stuff could be put here
+    return render_template('home.html', output = output)
 
 
 
