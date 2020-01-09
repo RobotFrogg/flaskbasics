@@ -1,9 +1,43 @@
 <!-- this directs it to url submit. NOTE: url_for('submit') -->
-<form action="{{ url_for('home') }}" method="post">
-  <!-- input_text is what this text area is called. -->
-    <textarea name="textInput"></textarea> <!--this text area is called textInput and can be accessed through that name-->
-    <input type="submit">
-</form>
-<textarea name="textOutput">
-{{output}}
-</textarea>
+<!DOCTYPE HTML>
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Testing</title>
+
+    <!-- Please do not use this type of styling, this is purely for test purposes -->
+    <style type="text/css">
+        h1 {
+            font-size: 22px;
+        }
+        .form-test {
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="form-test">
+        <form action="{{ url_for('home') }}" method="post">
+        <!-- input_text is what this text area is called. -->
+            <h1>Enter First Name</h1>
+            <textarea name="textInput"></textarea> <!--this text area is called textInput and can be accessed through that name-->
+            </br>
+            
+            <h1>Enter Last Name</h1>
+            <textarea name="textInput2"></textarea> <!--this text area is called textInput and can be accessed through that name-->
+            </br>
+            </br>
+            <input type="submit">
+        </form>
+        </br>
+        </br>
+        </br>
+        </br>
+        
+        <h1>Output</h1>
+        <textarea name="textOutput">
+        {{return_text}}
+        </textarea>
+    </div>
+</body>
+</HTML>

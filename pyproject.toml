@@ -6,3 +6,5 @@ version = "0.0.0"
 [tool.poetry.dependencies]
 flask = "*"
 python = "^3.7"
+Pyrebase = "^3.0"
+firebase-admin = "^3.2"
